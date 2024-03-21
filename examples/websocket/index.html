@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Websocket Title</title>
+
+    <style>
+        .wrapper {
+            width: 200px;
+            border: 1px solid red;
+            padding: 10px;
+            min-width: 300px;
+            position: relative;
+
+            ul {
+                min-height: 400px;
+            }
+
+            #ns {
+                position: absolute;
+                top: -5px;
+                right: -10px;
+                z-index: 999;
+                background: white;
+                padding: 10px;
+                border: 1px solid red;
+            }
+        }
+
+        .wrapper.master {
+            border: 1px solid green;
+
+            #ns {
+                border: 1px solid green;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="page-wrapper" class="wrapper">
+    <div id="ns"></div>
+    <br/>
+    <label for="messages"> Messages</label>
+    <ul id="messages">
+    </ul>
+
+    <input id="message" placeholder="message"/>
+    <br/>
+    <br/>
+    <button id="connect">Connect</button>
+    <button id="close">Close</button>
+    <button id="cancel">Cancel</button>
+    <button id="send">Send</button>
+</div>
+<script type="module" src="/examples/websocket/index.ts"></script>
+</body>
+</html>
